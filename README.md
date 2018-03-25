@@ -20,7 +20,7 @@ var opt1 = new Adagrad(0.1);
 var res1 = opt1.Compute(dx);
 ```
 `Adagrad` optimizer will use 0.1 learning rate to update the value.
-Similiarly you can use defferent optimizers:
+Similarly you can use defferent optimizers:
 #### Adam
 ```
 var opt2 = new Adam(100, 1000, 0.01);
