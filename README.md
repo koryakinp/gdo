@@ -19,7 +19,7 @@ compute a deriviative `dx` and provide it to `Update()` method of the optimizer:
 var opt1 = new Adagrad(0.1);
 opt1.SetValue(10);
 opt1.Update(dx);
-var res = opt1.Value;
+var res1 = opt1.Value;
 ```
 `Adagrad` optimizer will use 0.1 learning rate to update the value.
 Similarly you can use different optimizers:
