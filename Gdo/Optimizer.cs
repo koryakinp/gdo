@@ -7,7 +7,7 @@ namespace Gdo
         protected readonly double _lr;
         protected double x;
 
-        protected Optimizer(double learningRate)
+        internal Optimizer(double learningRate)
         {
             ValidateLearningRate(learningRate);
             _lr = learningRate;
