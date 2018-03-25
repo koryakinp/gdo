@@ -11,18 +11,18 @@ namespace Gdo.Optimizers
         public Adadelta(int period, double learningRate) : base(learningRate)
         {
             ValidatePeriod(period);
-            _period = 1 - 1.00 / _period;
+            _period = 1 - 1.00 / period;
+            ema1 = 1;
+            ema2 = 1;
         }
 
         public override double Compute(double dx)
         {
             ema1 = _period * ema1 + (1 - _period) * Math.Pow(dx, 2);
-            var rms_grad = Rms(ema1);
+            var delta = (Rms(ema2) / Rms(ema1)) * dx;
+            ema2 = _period * ema2 + (1 - _period) * Math.Pow(delta, 2);
 
-            ema2 = _period * ema2 + (1 - _period) * Math.Pow(rms_grad, 2);
-            var rms_teta = Rms(ema2);
-
-            return x -= (rms_teta / rms_grad) * dx;
+            return x -= delta;
         }
     }
 }

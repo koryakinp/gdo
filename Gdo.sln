@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2005
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gdo", "Gdo\Gdo.csproj", "{F8C2F28F-03CE-40D4-B266-CE3D20A3E298}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gdo", "Gdo\Gdo.csproj", "{F8C2F28F-03CE-40D4-B266-CE3D20A3E298}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gdo.Tests", "Gdo.Tests\Gdo.Tests.csproj", "{645CFD82-F383-441F-ACF9-9131AC37C39A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{F8C2F28F-03CE-40D4-B266-CE3D20A3E298}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8C2F28F-03CE-40D4-B266-CE3D20A3E298}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8C2F28F-03CE-40D4-B266-CE3D20A3E298}.Release|Any CPU.Build.0 = Release|Any CPU
+		{645CFD82-F383-441F-ACF9-9131AC37C39A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{645CFD82-F383-441F-ACF9-9131AC37C39A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{645CFD82-F383-441F-ACF9-9131AC37C39A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{645CFD82-F383-441F-ACF9-9131AC37C39A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
