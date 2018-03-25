@@ -2,6 +2,18 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
+    <Authors>Pavel Koryakin &lt;koryakinp@koryakinp.com&gt;</Authors>
+    <Description>Gradient Descent Optimization algorithms for .NET Core</Description>
+    <PackageLicenseUrl>https://github.com/koryakinp/gdo/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/koryakinp/gdo</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/koryakinp/gdo</RepositoryUrl>
+    <PackageTags>gradient-descent optimization adagrad adam adadelta rmsprop</PackageTags>
+    <Copyright>Coopyright 2018 © Pavel Koryakin. All Rights Reserved.</Copyright>
+    <PackageId>Gdo.koryakinp</PackageId>
+    <PackageReleaseNotes>1. Adagrad
+2. Adam
+3. Adadelta
+4. RMSprop</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
