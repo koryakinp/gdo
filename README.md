@@ -1,4 +1,5 @@
 # Gdo
+
 Gradient Descent Optimization algorithms for .NET Core
 
 1. Adagrad
@@ -6,7 +7,7 @@ Gradient Descent Optimization algorithms for .NET Core
 3. Adadelta
 4. RMSprop
 
-### Installing
+## Installing
 
 ```
 PM> Install-Package koryakinp.gdo
@@ -17,7 +18,7 @@ Pavel koryakin <koryakinp@koryakinp.com>
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/koryakinp/gdo/blob/master/LICENSE) for details.
 
 ## Acknowledgments
 
