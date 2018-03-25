@@ -12,6 +12,13 @@ Gradient Descent Optimization algorithms for .NET Core
 ```
 PM> Install-Package Gdo.koryakinp
 ```
+
+## Example
+compute a deriviative `dx` and provide it to optimizer:
+```
+var opt1 = new Adagrad(0.1);
+var result = opt1.Compute(dx);
+```
 ## Authors
 
 Pavel koryakin <koryakinp@koryakinp.com>
