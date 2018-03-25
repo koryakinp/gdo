@@ -10,7 +10,7 @@ Gradient Descent Optimization algorithms for .NET Core
 ## Installing
 
 ```
-PM> Install-Package gdo.koryakinp
+PM> Install-Package Gdo.koryakinp
 ```
 ## Authors
 
