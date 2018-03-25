@@ -45,7 +45,7 @@ namespace Gdo.Tests
 
             var optimizer = new LinearOptimizer(opt_a, opt_b, 2, 30);
 
-            for (int i = 0; i < 10000; i++)
+            for (int i = 0; i < 100000; i++)
             {
                 int x = GutRandomX();
                 optimizer.Optimize(x);
@@ -81,7 +81,7 @@ namespace Gdo.Tests
 
             var optimizer = new LinearOptimizer(opt_a, opt_b, 2, 30);
 
-            for (int i = 0; i < 10000; i++)
+            for (int i = 0; i < 200000; i++)
             {
                 int x = GutRandomX();
                 optimizer.Optimize(x);

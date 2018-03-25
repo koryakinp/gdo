@@ -19,11 +19,11 @@ namespace Gdo.Optimizers
             beta2 = 1 - 1.00 / period2;
         }
 
-        public override double Compute(double dx)
+        public override void Update(double dx)
         {
             m = beta1 * m + (1 - beta1) * dx;
             v = beta2 * v + (1 - beta2) * Math.Pow(dx, 2);
-            return x -= _lr * (m / Rms(v));
+            Value -= _lr * (m / Rms(v));
         }
     }
 }

@@ -5,7 +5,7 @@ namespace Gdo
     public abstract class Optimizer
     {
         protected readonly double _lr;
-        protected double x;
+        public double Value;
 
         internal Optimizer(double learningRate)
         {
@@ -23,7 +23,12 @@ namespace Gdo
             return sqrt;
         }
 
-        public abstract double Compute(double dx);
+        public abstract void Update(double dx);
+
+        public void SetValue(double value)
+        {
+            Value = value;
+        }
 
         protected void ValidateLearningRate(double lr)
         {

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Gdo.Tests
+﻿namespace Gdo.Tests
 {
     internal class LinearOptimizer
     {
@@ -18,10 +14,15 @@ namespace Gdo.Tests
         {
             this.a = 1;
             this.b = 1;
+
             opt_a = a;
             opt_b = b;
+
             A = targetA;
             B = targetB;
+
+            opt_a.SetValue(10);
+            opt_b.SetValue(5);
         }
 
         public void Optimize(int x)
@@ -32,8 +33,11 @@ namespace Gdo.Tests
             double deda = 2 * (actual - target) * x;
             double dedb = 2 * (actual - target);
 
-            a = opt_a.Compute(deda);
-            b = opt_b.Compute(dedb);
+            opt_a.Update(deda);
+            opt_b.Update(dedb);
+
+            a = opt_a.Value;
+            b = opt_b.Value;
         }
 
         private double CalculateTarget(int x)

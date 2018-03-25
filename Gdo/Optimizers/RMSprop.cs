@@ -13,13 +13,13 @@ namespace Gdo.Optimizers
             _ma = 1 - 1.00 / period;
         }
 
-        public override double Compute(double dx)
+        public override void Update(double dx)
         {
             _cache = _cache == 0 
                 ? _cache = Math.Pow(dx, 2) 
                 : _cache = _ma * _cache + (1 - _ma) * Math.Pow(dx, 2);
 
-            return x -= _lr * (dx / Rms(_cache));
+            Value -= _lr * (dx / Rms(_cache));
         }
     }
 }
