@@ -8,7 +8,7 @@ namespace Gdo.Optimizers
         private double ema1;
         private double ema2;
 
-        public Adadelta(int period, double learningRate) : base(learningRate)
+        public Adadelta(double learningRate, int period) : base(learningRate)
         {
             ValidatePeriod(period);
             _period = 1 - 1.00 / period;

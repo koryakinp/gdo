@@ -22,8 +22,8 @@ namespace Gdo.Tests
         [TestMethod]
         public void TestAdam()
         {
-            var opt_a = new Adam(100, 1000, 0.01);
-            var opt_b = new Adam(100, 1000, 0.01);
+            var opt_a = new Adam(0.01,100, 1000);
+            var opt_b = new Adam(0.01, 100, 1000);
 
             var optimizer = new LinearOptimizer(opt_a, opt_b, 2, 30);
 
@@ -76,8 +76,8 @@ namespace Gdo.Tests
         [TestMethod]
         public void TestAdadelta()
         {
-            var opt_a = new Adadelta(25, 0.1);
-            var opt_b = new Adadelta(25, 0.1);
+            var opt_a = new Adadelta(0.1, 25);
+            var opt_b = new Adadelta(0.1, 25);
 
             var optimizer = new LinearOptimizer(opt_a, opt_b, 2, 30);
 

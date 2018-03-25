@@ -10,7 +10,7 @@ namespace Gdo.Optimizers
         private double v;
 
 
-        public Adam(int period1, int period2, double learningRate) : base(learningRate)
+        public Adam(double learningRate, int period1, int period2) : base(learningRate)
         {
             ValidatePeriod(period1);
             ValidatePeriod(period2);
