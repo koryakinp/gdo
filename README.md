@@ -14,27 +14,35 @@ PM> Install-Package Gdo.koryakinp
 ```
 
 ## Example
-compute a deriviative `dx` and provide it to optimizer:
+compute a deriviative `dx` and provide it to `Update()` method of the optimizer:
 ```
 var opt1 = new Adagrad(0.1);
-var res1 = opt1.Compute(dx);
+opt1.SetValue(10);
+opt1.Update(dx);
+var res1 = opt1.Value;
 ```
 `Adagrad` optimizer will use 0.1 learning rate to update the value.
-Similarly you can use defferent optimizers:
+Similarly you can use different optimizers:
 #### Adam
 ```
-var opt2 = new Adam(100, 1000, 0.01);
-var res2 = opt2.Compute(dx);
+var opt2 = new Adam(0.01, 100, 1000);
+opt2.SetValue(10);
+opt2.Update(dx);
+var res2 = opt2.Value;
 ```
 #### RMSprop
 ```
-var opt3 =  new RMSprop(0.1, 20);
-var res3 = opt3.Compute(dx);
+var opt3 =  new RMSprop(0.1, 25);
+opt3.SetValue(10);
+opt3.Update(dx);
+var res3 = opt3.Value;
 ```
 #### Adadelta
 ```
-var opt4 = new Adadelta(25, 0.1);
-var res4 = opt4.Compute(dx);
+var opt4 = new Adadelta(0.1, 25);
+opt4.SetValue(10);
+opt4.Update(dx);
+var res4 = opt4.Value;
 ```
 ## Authors
 
