@@ -25,7 +25,7 @@ namespace Gdo
 
         public abstract void Update(double dx);
 
-        internal void SetValue(double value)
+        public void SetValue(double value)
         {
             Value = value;
         }
