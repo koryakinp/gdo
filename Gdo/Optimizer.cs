@@ -4,7 +4,7 @@ namespace Gdo
 {
     public abstract class Optimizer
     {
-        internal protected readonly double _lr;
+        internal readonly double _lr;
         public double Value;
 
         internal Optimizer(double learningRate)
@@ -13,7 +13,7 @@ namespace Gdo
             _lr = learningRate;
         }
 
-        protected double Rms(double val)
+        internal double Rms(double val)
         {
             double sqrt = Math.Sqrt(val);
             if (sqrt == 0)
@@ -30,7 +30,7 @@ namespace Gdo
             Value = value;
         }
 
-        internal protected void ValidateLearningRate(double lr)
+        internal void ValidateLearningRate(double lr)
         {
             if(lr > 1 || lr <= 0)
             {
@@ -38,7 +38,7 @@ namespace Gdo
             }
         }
 
-        internal protected void ValidatePeriod(int period)
+        internal void ValidatePeriod(int period)
         {
             if (period <= 1)
             {
