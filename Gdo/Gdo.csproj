@@ -10,10 +10,10 @@
     <PackageTags>gradient-descent optimization adagrad adam adadelta rmsprop</PackageTags>
     <Copyright>Coopyright 2018 © Pavel Koryakin. All Rights Reserved.</Copyright>
     <PackageId>Gdo.koryakinp</PackageId>
-    <PackageReleaseNotes>-minor fixes</PackageReleaseNotes>
+    <PackageReleaseNotes>-implemented IClonable</PackageReleaseNotes>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
-    <Version>2.1.3</Version>
+    <Version>2.1.4</Version>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
   </PropertyGroup>
 

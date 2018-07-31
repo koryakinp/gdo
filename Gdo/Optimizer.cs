@@ -2,7 +2,7 @@
 
 namespace Gdo
 {
-    public abstract class Optimizer
+    public abstract class Optimizer : ICloneable
     {
         internal readonly double _lr;
         public double Value;
@@ -44,6 +44,11 @@ namespace Gdo
             {
                 throw new Exception(Messages.InvalidPeriodMessage);
             }
+        }
+
+        public object Clone()
+        {
+            return MemberwiseClone();
         }
     }
 }
