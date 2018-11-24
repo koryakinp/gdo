@@ -7,6 +7,8 @@ namespace Gdo
         internal readonly double _lr;
         public double Value;
 
+        public Optimizer() {}
+
         internal Optimizer(double learningRate)
         {
             ValidateLearningRate(learningRate);
